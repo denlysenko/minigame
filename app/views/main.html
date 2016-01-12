@@ -1,0 +1,29 @@
+<div class="canvas">
+  <div class="header">
+    Hit the button
+  </div>
+  <div class="body">
+    <a href="" class="button" ng-click="add()">Click Me</a>
+  </div>
+  <div class="footer">
+    <span timer="20" on-end="onEnd()">Timer: <span>{{timer}}</span></span>
+    <span>Score: {{count}}</span> 
+  </div>
+  <div class="results" ng-show="isEnded">
+    <h4>Time is up!</h4>
+    <h4>Your score is: <span>{{count}}</span></h4> 
+    <a href="" ng-click="playAgain()" class="button down">Play again!</a>
+  </div>
+  <div class="results" ng-show="isStart">
+    <form name="timeForm">
+      <h4>Please, enter number of seconds!</h4>
+      <div class="form-control">
+        <p class="text-danger" ng-show="timeForm.seconds.$error.number">Should Be A Number!</p>
+        <p class="text-danger" ng-show="timeForm.seconds.$error.required">Please Enter A Number!</p>
+        <input type="number" ng-model="game.duration" name="seconds" required>
+      </div>
+    </form>
+    <h4>Hit the button as much as possible in <span>{{game.duration}} seconds!</span></h4>
+    <a href="" class="button" ng-click="start()" ng-show="timeForm.$valid">Start play!</a>
+  </div>
+</div>

@@ -1,0 +1,101 @@
+.canvas {
+  position: relative;
+  width: 960px;
+  height: 500px;
+  margin: auto;
+  border: 1px solid #ccc;
+  transform: translateY(50%);
+}
+
+.header,
+.footer {
+  padding: 0 20px;
+  font-size: 26px;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: #02d302;
+  overflow: hidden;
+}
+
+.footer > span:first-of-type {
+  float: left;
+}
+.footer > span:last-of-type {
+  float: right;
+}
+
+.body {
+  width: 100%;
+  height: calc(100% - 80px);
+  background: green;
+}
+
+a.button {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  transform: translateY(150%);
+  border-radius: 100%;
+  border: 3px solid #efc004;
+  background: #5959f7;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 100px;
+  text-decoration: none;
+  user-select: none;
+}
+
+.button:hover {
+  box-shadow: 0 0 1px 2px rgba(0,0,0,.3);
+}
+
+.button:active{
+  box-shadow: inset 0 0 1px 2px rgba(0,0,0,.3);
+}
+
+.results {
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  width: 900px;
+  height: 400px;
+  background: #ccc;
+  transition: all .6s;
+}
+
+.results h4 {
+  font-size: 32px;
+  color: green;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+.results .button {
+  transform: none;
+}
+
+.button.down {
+  margin-top: 125px;
+}
+
+.form-control {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-control input {
+  padding-left: 15px;
+  height: 42px;
+  outline: none;
+  border: 1px solid #888;
+  border-radius: 3px;
+}
+
+.text-danger {
+  color: red;
+}
